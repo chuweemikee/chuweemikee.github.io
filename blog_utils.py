@@ -20,6 +20,7 @@ def create_new_blog(path_to_content, title, content, cover_image=Path("../PT Cen
             f.write("<!DOCTYPE html>\n")
             f.write("<html>\n")
             f.write("<head>\n")
+            f.write("< meta charset = 'utf-8'>")
             f.write(f"<title> {title} </title>\n")
             f.write("</head>\n")
             
