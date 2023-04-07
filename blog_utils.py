@@ -42,7 +42,7 @@ def check_for_duplicate_links(path_to_new_content, links):
 
 def write_to_index(path_to_blog, path_to_new_content):
     with open(path_to_blog/"index.html") as index:
-        soup = Soup(index.read())
+        soup = Soup(index.read(), features="html.parser")
 
     links = soup.find_all("a")
     if not links:
